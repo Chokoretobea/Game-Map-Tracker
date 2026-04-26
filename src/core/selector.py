@@ -4,7 +4,7 @@ import os
 import mss
 from PIL import Image, ImageTk
 
-CONFIG_FILE = "config.json"
+CONFIG_FILE = "../config/config.json"
 
 
 class MinimapSelector:

@@ -5,7 +5,7 @@ import tkinter as tk
 from PIL import Image, ImageTk
 import torch
 import ssl
-import config
+import src.config.config as config
 import os
 import sys
 import subprocess
@@ -17,8 +17,8 @@ from pynput import keyboard
 
 
 # 🌟 导入自定义模块
-from tracker_engine import LoftrEngine
-from route_manager import RouteManager
+from src.core.tracker_engine import LoftrEngine
+from src.core.route_manager import RouteManager
 
 ssl._create_default_https_context = ssl._create_unverified_context
 

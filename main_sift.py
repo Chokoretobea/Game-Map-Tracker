@@ -4,7 +4,7 @@ import mss
 import tkinter as tk
 from PIL import Image, ImageTk
 import time
-import config  # <--- 导入同目录下的配置文件
+import src.config.config as config  # <--- 导入同目录下的配置文件
 import subprocess
 import os
 import sys

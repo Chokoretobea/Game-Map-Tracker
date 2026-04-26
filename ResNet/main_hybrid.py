@@ -13,7 +13,7 @@ import time
 import os
 import sys
 import subprocess
-import config
+import src.config.config as config
 
 
 # ==========================================
