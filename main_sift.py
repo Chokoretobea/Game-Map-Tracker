@@ -29,7 +29,7 @@ def run_selector_if_needed(force=False):
             command = [selector_path]
         else:
             base_dir = os.path.dirname(os.path.abspath(__file__))
-            selector_path = os.path.join(base_dir, "selector.py")
+            selector_path = os.path.join(base_dir, "src", "core", "selector.py")
             command = [sys.executable, selector_path]
 
         try:

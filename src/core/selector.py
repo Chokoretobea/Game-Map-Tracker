@@ -4,7 +4,9 @@ import os
 import mss
 from PIL import Image, ImageTk
 
-CONFIG_FILE = "../config/config.json"
+# 计算配置文件的绝对路径
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CONFIG_FILE = os.path.join(BASE_DIR, "..", "config", "config.json")
 
 
 class MinimapSelector:
@@ -201,7 +203,7 @@ class MinimapSelector:
         with open(CONFIG_FILE, 'w', encoding='utf-8') as f:
             json.dump(config_data, f, indent=4, ensure_ascii=False)
 
-        print(f"✅ 小地图区域已成功保存: top={self.y}, left={self.x}, size={self.size}")
+        print(f"小地图区域已成功保存: top={self.y}, left={self.x}, size={self.size}")
 
 
 if __name__ == "__main__":

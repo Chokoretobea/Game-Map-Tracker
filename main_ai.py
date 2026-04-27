@@ -35,7 +35,7 @@ def run_selector_if_needed(force=False):
             command = [selector_path]
         else:
             base_dir = os.path.dirname(os.path.abspath(__file__))
-            selector_path = os.path.join(base_dir, "selector.py")
+            selector_path = os.path.join(base_dir, "src", "core", "selector.py")
             command = [sys.executable, selector_path]
         try:
             subprocess.run(command, check=True)
@@ -411,7 +411,7 @@ class AIMapTrackerApp:
             self.state = "LOCAL_TRACK"
 
     def on_relocate_done(self, x, y):
-        print(f"📍 重新定位坐标: X={x}, Y={y}")
+        print(f"重新定位坐标: X={x}, Y={y}")
         self.last_x, self.last_y = x, y
         self.smoothed_cx, self.smoothed_cy = float(x), float(y)
         self.lost_frames = 0

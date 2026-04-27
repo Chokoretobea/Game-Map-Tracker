@@ -25,7 +25,7 @@ def download_and_stitch():
     width = (X_MAX - X_MIN + 1) * TILE_SIZE
     height = (Y_MAX - Y_MIN + 1) * TILE_SIZE
 
-    print(f"👉 准备创建一块 {width} x {height} 像素的画布...")
+    print(f"准备创建一块 {width} x {height} 像素的画布...")
     result_image = Image.new("RGBA", (width, height), (0, 0, 0, 0))
 
     # 2. 伪装请求头，防止被服务器识别为爬虫拦截
@@ -71,10 +71,10 @@ def download_and_stitch():
                 print(f"  [错误] 下载 X={x}, Y={y} 失败: {e}")
 
     # 4. 导出成品
-    print("\n✅ 下载与拼接完成！正在保存...")
+    print("下载与拼接完成！正在保存...")
     save_path = "test_map_z12.png"
     result_image.save(save_path)
-    print(f"🎉 大功告成！文件已保存至代码同目录下的: {save_path}")
+    print(f"文件已保存至代码同目录下的: {save_path}")
 
 
 if __name__ == "__main__":
